@@ -36,6 +36,8 @@ export const Experience = (props) => {
   const characterContainerAboutRef = useRef();
 
   const [characterAnimation, setCharacterAnimation] = useState("Typing");
+
+  //Ejecuta las animaciones del personaje
   useEffect(() => {
     setCharacterAnimation("Falling");
     setTimeout(() => {
@@ -73,12 +75,15 @@ export const Experience = (props) => {
     <>
       <Background />
       <motion.group
+              //position Del personaje inicial
+
         position={[1.9072935059634513, 0.14400000000000002, 2.681801948466054]}
         rotation={[-3.141592653589793, 1.2053981633974482, 3.141592653589793]}
         animate={"" + section}
         transition={{
           duration: 0.6,
         }}
+        //position Del personaje en las paginas
         variants={{
           0: {
             scaleX: 0.9,
